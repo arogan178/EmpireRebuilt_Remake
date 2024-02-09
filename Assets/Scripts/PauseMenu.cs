@@ -9,15 +9,13 @@ public class PauseMenu : MonoBehaviour
     {
         if (GameIsPaused)
         {
-            Time.timeScale = 1f;
-            GameIsPaused = false;
-            Debug.Log("Resume");
+            Time.timeScale = 0f;
+            Debug.Log("Game Paused");
         }
         else
         {
-            Time.timeScale = 0f;
-            GameIsPaused = true;
-            Debug.Log("Pause");
+            Time.timeScale = 1f;
+            Debug.Log("Game Unpaused");
         }
     }
 
