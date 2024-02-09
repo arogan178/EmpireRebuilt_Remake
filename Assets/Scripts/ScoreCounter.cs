@@ -5,18 +5,24 @@ using TMPro;
 
 public class ScoreCounter : MonoBehaviour
 {
-    public TMP_Text scoreText;
-    public int score;
+    public TMP_Text InGameScoreText;
+    public TMP_Text BuyMenuScoreText;
+    public int InGameScore;
 
     void Start()
     {
-        score = 0;
-        scoreText.text = score.ToString();
+        InGameScore = 0;
+        InGameScoreText.text = InGameScore.ToString();
+    }
+
+    void Update()
+    {
+        BuyMenuScoreText.text = InGameScoreText.text;
     }
 
     public void clickButtonForPoints()
     {
-        score += 1;
-        scoreText.text = score.ToString();
+        InGameScore += 1;
+        InGameScoreText.text = InGameScore.ToString();
     }
 }

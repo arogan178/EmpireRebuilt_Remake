@@ -2397,7 +2397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &597316628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2582,8 +2582,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ec77f1b0ab61243ae876ec614e53d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 2062212306}
-  score: 0
+  InGameScoreText: {fileID: 2062212306}
+  BuyMenuScoreText: {fileID: 1055714455}
+  InGameScore: 0
 --- !u!1 &634648546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3565,7 +3566,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 999
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &906554592
 RectTransform:
