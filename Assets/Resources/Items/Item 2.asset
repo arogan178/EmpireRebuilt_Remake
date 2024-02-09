@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item 2
   m_EditorClassIdentifier: 
   itemID: 2
-  name: item 2
+  name: Item 2
   clicksPerSecond: 1
   currentAmount: 0
   cost: 0

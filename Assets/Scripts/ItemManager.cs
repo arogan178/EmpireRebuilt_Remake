@@ -13,8 +13,10 @@ public class ItemManager : MonoBehaviour
 
     void Awake()
     {
-        itemName = GameObject.Find("ItemName").GetComponent<TMP_Text>();
-        itemCost = GameObject.Find("ItemCost").GetComponent<TMP_Text>();
+        {
+            itemName = GameObject.Find("ItemName").GetComponent<TMP_Text>();
+            itemCost = GameObject.Find("ItemCost").GetComponent<TMP_Text>();
+        }
     }
 
     void Start() { }
@@ -33,5 +35,5 @@ public class ItemManager : MonoBehaviour
     //     // (6, "item7", 7800, 0, 20000000);
     //     // (7, "item8", 44000, 0, 330000000);
     //     // (8, "item9", 260000, 0, 5100000000);
-    // }
+    //
 }

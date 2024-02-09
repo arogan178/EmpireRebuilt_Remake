@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ae71da7275b0a4c968378aca4f60bb, type: 3}
   m_Name: Item 6
   m_EditorClassIdentifier: 
-  itemID: 1
-  name: item1
+  itemID: 6
+  name: Item 6
   clicksPerSecond: 0.1
   currentAmount: 0
-  baseCost: 10
-  newCost: 0
+  cost: 0

@@ -7,15 +7,22 @@ using TMPro;
 public class ShopManager : MonoBehaviour
 {
     public List<GameObject> itemList = new List<GameObject>();
+    public Item[] itemObjectList = new Item[9];
+    ItemManager itemManager;
 
     void Awake()
     {
+        // Load all ScriptableObjects of type Item
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Item"))
         {
             itemList.Add(item);
             item.AddComponent<ItemManager>(); // Attach ItemManager script
+            itemList.Sort((a, b) => a.name.CompareTo(b.name));
         }
+    }
 
+    void Start()
+    {
         foreach (GameObject item in itemList)
         {
             ItemManager itemManager = item.GetComponent<ItemManager>();
@@ -26,15 +33,8 @@ public class ShopManager : MonoBehaviour
                 int itemID = int.Parse(item.name.Substring(item.name.IndexOf('_') + 1));
 
                 // Assuming there's a way to get the corresponding ScriptableObject based on ID
-                ScriptableObject itemObject = GetScriptableObjectForID(itemID);
-                if (itemObject is Item)
-                {
-                    itemManager.item = (Item)itemObject;
-                }
-                else
-                {
-                    Debug.LogError("GetScriptableObjectForID did not return an Item!");
-                }
+
+                itemManager.item = GetScriptableObjectForID(itemID);
 
                 // Update item name and cost (assuming fields are correctly assigned)
                 if (itemManager.itemName != null && itemManager.itemCost != null)
@@ -54,13 +54,19 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    private ScriptableObject GetScriptableObjectForID(int itemID)
+    public Item GetScriptableObjectForID(int itemID)
     {
-        // Replace with your actual logic to find the ScriptableObject
-        // based on the provided itemID
-        ScriptableObject item = Resources.Load<ScriptableObject>("Items/" + itemID); // Example
-        return item;
-    }
+        Item itemObject = Resources.Load<Item>("Items/Item " + itemID);
 
-    void Start() { }
+        if (itemObject is Item)
+        {
+            return (Item)itemObject;
+        }
+        else
+        {
+            Debug.LogError("ScriptableObject with ID " + itemID + " is not of type Item!");
+
+            return null; // or handle it differently
+        }
+    }
 }

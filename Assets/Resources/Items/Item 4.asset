@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99ae71da7275b0a4c968378aca4f60bb, type: 3}
-  m_Name: Item 8
+  m_Name: Item 4
   m_EditorClassIdentifier: 
-  itemID: 1
-  name: item1
+  itemID: 4
+  name: Item 4
   clicksPerSecond: 0.1
   currentAmount: 0
-  baseCost: 10
-  newCost: 0
+  cost: 0
