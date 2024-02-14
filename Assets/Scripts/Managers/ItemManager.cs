@@ -21,11 +21,11 @@ public class ItemManager : MonoBehaviour
 
     void Start() { }
 
-    public void onClick()
-    {
-        // item.currentAmount++;
-        // itemCost.text = (item.cost * (float)Math.Pow(1.15f, item.currentAmount)).ToString();
-    }
+    // public void onClick()
+    // {
+    //     // item.currentAmount++;
+    //     // itemCost.text = (item.cost * (float)Math.Pow(1.15f, item.currentAmount)).ToString();
+    // }
     //     // (0, "item1", 0.1f, 10, 15);
     //     // (1, "item2", 1, 0, 100);
     //     // (2, "item3", 8, 0, 1100);

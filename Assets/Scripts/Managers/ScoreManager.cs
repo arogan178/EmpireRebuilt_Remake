@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ScoreCounter : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
     public TMP_Text InGameScoreText;
     public TMP_Text BuyMenuScoreText;
