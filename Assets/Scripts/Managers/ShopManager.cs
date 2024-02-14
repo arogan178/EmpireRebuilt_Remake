@@ -19,6 +19,7 @@ public class ShopManager : MonoBehaviour
             item.AddComponent<ItemManager>(); // Attach ItemManager script
             itemList.Sort((a, b) => a.name.CompareTo(b.name));
         }
+        Debug.Log("Items in List:" + itemList.Count);
     }
 
     void Start()
