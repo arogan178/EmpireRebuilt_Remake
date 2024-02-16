@@ -5,19 +5,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
-    public void pauseGame(bool GameIsPaused)
-    {
-        if (GameIsPaused)
-        {
-            Time.timeScale = 0f;
-            Debug.Log("Game Paused");
-        }
-        else
-        {
-            Time.timeScale = 1f;
-            Debug.Log("Game Unpaused");
-        }
-    }
+    public void pauseGame(bool GameIsPaused) { }
 
     public void QuitGame()
     {

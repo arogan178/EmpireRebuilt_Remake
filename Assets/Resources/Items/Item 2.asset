@@ -16,4 +16,5 @@ MonoBehaviour:
   name: Item 2
   clicksPerSecond: 1
   currentAmount: 0
+  baseCost: 100
   cost: 100

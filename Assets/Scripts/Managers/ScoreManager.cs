@@ -5,7 +5,7 @@ public class ScoreManager : MonoBehaviour
 {
     public TMP_Text InGameScoreText;
     public TMP_Text BuyMenuScoreText;
-    public int InGameScore;
+    public float InGameScore;
 
     void Start()
     {

@@ -16,4 +16,5 @@ MonoBehaviour:
   name: Item 7
   clicksPerSecond: 7800
   currentAmount: 0
+  baseCost: 20000000
   cost: 20000000

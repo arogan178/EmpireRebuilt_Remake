@@ -34,7 +34,6 @@ public class ShopManager : MonoBehaviour
                 // Assuming there's a way to get the corresponding ScriptableObject based on ID
 
                 itemManager.item = GetScriptableObjectForID(itemID);
-
                 // Update item name and cost (assuming fields are correctly assigned)
                 if (itemManager.itemName != null && itemManager.itemCost != null)
                 {
