@@ -10,6 +10,7 @@ public class Item : ScriptableObject
     public new string name;
     public float clicksPerSecond;
     public int currentAmount;
+    public float baseCost;
     public float cost;
 
     public Item()
@@ -18,6 +19,13 @@ public class Item : ScriptableObject
         name = "";
         clicksPerSecond = 0;
         currentAmount = 0;
+        baseCost = 0;
         cost = 0;
+    }
+
+    private void OnEnable()
+    {
+        cost = baseCost;
+        currentAmount = 0;
     }
 }
