@@ -7,7 +7,6 @@ using TMPro;
 public class ShopManager : MonoBehaviour
 {
     public List<GameObject> itemList = new List<GameObject>();
-    public Item[] itemObjectList = new Item[9];
     ItemManager itemManager;
 
     void Awake()
@@ -16,7 +15,6 @@ public class ShopManager : MonoBehaviour
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Item"))
         {
             itemList.Add(item);
-            item.AddComponent<ItemManager>(); // Attach ItemManager script
             itemList.Sort((a, b) => a.name.CompareTo(b.name));
         }
         Debug.Log("Items in List:" + itemList.Count);
@@ -26,7 +24,7 @@ public class ShopManager : MonoBehaviour
     {
         foreach (GameObject item in itemList)
         {
-            ItemManager itemManager = item.GetComponent<ItemManager>();
+            itemManager = item.GetComponent<ItemManager>();
 
             if (itemManager != null)
             {
@@ -42,6 +40,9 @@ public class ShopManager : MonoBehaviour
                 {
                     itemManager.itemName.text = itemManager.item.name;
                     itemManager.itemCost.text = itemManager.item.cost.ToString();
+
+                    Debug.Log("ItemManager Start, itemName: " + itemManager.itemName.text);
+                    Debug.Log("ItemManager Start, itemCost: " + itemManager.itemCost.text);
                 }
                 else
                 {

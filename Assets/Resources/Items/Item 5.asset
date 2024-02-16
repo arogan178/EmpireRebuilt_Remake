@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 5
   name: Item 5
-  clicksPerSecond: 0.1
+  clicksPerSecond: 260
   currentAmount: 0
-  cost: 0
+  cost: 130000
